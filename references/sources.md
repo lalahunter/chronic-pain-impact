@@ -44,3 +44,19 @@ Lucas JW, Sohi I. Chronic pain and high-impact chronic pain in U.S. adults, 2023
 
 Used for the operational definitions of chronic pain and high-impact chronic pain.
 The definitions are consistent across NHIS years; this project applies them to the 2025 data. The published prevalence figures in this brief (2023 data) are used only as a sanity check.
+
+
+## Context and burden
+
+Guy GP Jr, Miller GF, Legha JK, Rikard SM, Strahan AE, Mikosz C, Florence CS.
+Economic Costs of Chronic Pain—United States, 2021. *Medical Care*.
+2025 Sep 1;63(9):679-685. doi:10.1097/MLR.0000000000002181
+
+Used to support the statement on the economic burden of chronic pain ($722.8 billion in 2021: $530.6 billion in medical care costs and $192.2 billion in lost work productivity).
+
+
+## Clinical background
+
+Butler DS, Moseley GL. *Explain Pain*. 2nd ed. Adelaide: Noigroup Publications; 2013.
+
+Used for the pain neuroscience framework underlying the section on why pain intensity may not be enough: central sensitisation, the role of perceived threat in pain output, and the effect of pain education on pain itself.
