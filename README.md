@@ -23,7 +23,7 @@ Documentation PDFs are in `references/`; full references in:
 ## Repository
 
 - `notebooks/01-data-audit.ipynb` — what is in the file, missing data, variable selection
-- `notebooks/02-cohort-and-target.ipynb` — building the cohort and the HICP outcome
+- `notebooks/02-data-preparation.ipynb` — building the cohort and the HICP outcome
 - `src/` — the operational definitions and reusable functions
 - `docs/` — project framing
 - `references/` — source documentation
