@@ -38,7 +38,7 @@ First, what gets taken into account when burden is assessed. If pain intensity a
 
 Second, where to look more closely. If reported use of a pain-management strategy varies across income, education, region or cost-related barriers to care, that variation points to subgroups worth examining in service planning.
 
-This analysis is cross-sectional and descriptive. It can show what is associated with high impact, and how reported use differs between groups. It cannot show that a particular allocation of resources would improve outcomes.
+This analysis is cross-sectional and observational. It can show what is associated with high impact, and how reported use differs between groups. It cannot show that a particular allocation of resources would improve outcomes.
 
 ## 4. Research questions
 
@@ -64,11 +64,41 @@ RQ1 is answered by comparing three models on the same outcome and the same cohor
 
 **Outcome:** high-impact chronic pain (yes / no), within adults with chronic pain (n = 5,592; 1,956 with HICP, 3,636 without).
 
-**Model 0.** Pain intensity only.
+**Model 0.** Pain intensity only. (`PAIAMNT_A`, recoded). **The response codes are not ordered by intensity** in the file: 1 is "a little", 2 is "a lot" and 3 is "somewhere in between". The variable is recoded to a correctly ordered scale before use, in `notebooks/02-data-preparation.ipynb`.
 
 **Model A, baseline.** Pain intensity plus the rest of the information a clinician already has in a short consultation: age, sex, and pain location.
 
-**Model B, baseline plus biopsychosocial layer.** Everything in Model A, plus a set of biopsychosocial variables. The final list is fixed before any model is run and is recorded here.
+**Model B, baseline plus biopsychosocial layer.** Everything in Model A, plus eight biopsychosocial variables. The list was fixed before any model was run, from the domains reported in the literature and from the audit in `notebooks/01-data-audit.ipynb`. It was not selected from any association with the outcome.
+
+| Variable | Domain | Why it is included |
+|---|---|---|
+| `PHQCAT_A` | Psychological | Depressive symptoms, a core biopsychosocial domain in chronic pain |
+| `GADCAT_A` | Psychological | Anxiety symptoms. Correlated with the above (Spearman rho = 0.65) but a distinct construct, and neither is a proxy for the other |
+| `WPHSLEEP_A` | Sleep | Sleep quality, a distinct biopsychosocial domain with no evidence of problematic redundancy with the rest of the set |
+| `WPHSTRESS_A` | Stress and coping | Perceived ability to manage stress |
+| `SUPPORT_A` | Social | Dunn et al. (2024) report weaker support networks with moderate certainty of evidence |
+| `EDUCP_A` | Socioeconomic | Dunn et al. report lower socioeconomic status with moderate certainty of evidence |
+| `SMKCIGST_A` | Behavioural | Dunn et al. report smoking with moderate certainty of evidence |
+| `ARTHEV_A` | Comorbidity | The only biological candidate, and the one least correlated with every other variable in the set |
+
+
+**Why education and not the income-to-poverty ratio.** Both were audited and they measure the same socioeconomic dimension (Spearman rho = 0.43), so only one is kept. 
+
+**Education** is preferred for two reasons:
+- First, *income can be a consequence of the outcome*: an adult who stopped working because of pain has a lower income-to-poverty ratio because of the pain, which is the same reverse-causality concern that excludes the activity-limitation variables from every model here. *Educational attainment is generally less immediately affected by current pain status than current income, reducing the reverse-causality concern*. 
+- Second, `POVRATTC_A` is derived from imputed family income, and NCHS distributes only the first of ten imputations, so *it would be the only socioeconomic indicator in the model built on an estimated value*.
+
+
+**Candidates audited and not kept**:
+- `LONELY_A` measures the same social domain as `SUPPORT_A` (Spearman rho = -0.40) and it is the availability of support, not loneliness, that Dunn et al. (2024) name among their moderate-certainty factors.
+- `PAYWORRY_A` measures perceived healthcare-related financial strain rather than socioeconomic position or an observed barrier to care. It was therefore not retained in Model B or RQ3.
+- `PHSTAT_A`, self-rated general health, is reported by Dunn et al. (2024) at low certainty of evidence. Independently of that, in a cross-sectional design a broad self-rating of health may partly reflect the consequences of high-impact chronic pain rather than characteristics that precede it, which is the same concern that excludes the activity-limitation variables here.
+
+
+**Limit of the literature used.** Dunn et al. (2024) is an umbrella review of 13
+systematic reviews whose outcome is the development of chronic musculoskeletal pain, not high impact within adults who already have chronic pain. It supports the biopsychosocial plausibility of a variable, not its association with HICP.
+*Fear avoidance, one of its five moderate-certainty factors, is not measured in the NHIS and cannot be included*.
+
 
 The three models are compared on the same performance metrics. Model 0 against Model A answers whether pain intensity on its own is enough. Model A against Model B answers whether biopsychosocial information adds anything to what a consultation already captures.
 
@@ -86,7 +116,7 @@ The three models are compared on the same performance metrics. Model 0 against M
 
 **RQ2** is answered with a single table: the proportion of adults with HICP reporting each of the 11 strategies, with the number of valid responses shown next to every percentage. The strategies are not mutually exclusive, so respondents are also grouped by whether they report pharmacological approaches only, non-pharmacological only, both, or neither.
 
-**RQ3** compares those reported rates across income-to-poverty ratio, education, region, and the two cost-related barriers to care.
+**RQ3** compares those reported rates across income-to-poverty ratio, education, region, delayed care because of cost, and needed care but did not receive it because of cost.
 
 **How one strategy is selected for closer analysis.** RQ2 describes all 11 pain-management strategies. Only one of them is then analysed in more detail, and it is selected on criteria set before the results are seen:
 
