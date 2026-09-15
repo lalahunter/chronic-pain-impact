@@ -91,3 +91,42 @@ domains. The study used NHIS data and examined sociodemographic, psychosocial co
 
 The study also informed the interpretation of these variables as correlates rather
 than causal risk factors because of the cross-sectional survey design.
+
+
+
+### Population-level chronic pain and HICP
+
+- Von Korff, M., Scher, A. I., Helmick, C., Carter-Pokras, O., Dodick, D. W.,
+  Goulet, J., Hamill-Ruth, R., LeResche, L., Porter, L., Tait, R., Terman, G.,
+  Veasley, C., & Mackey, S. (2016). United States National Pain Strategy for
+  Population Research: Concepts, definitions, and pilot data.
+  *The Journal of Pain, 17*(10), 1068–1080.
+  https://doi.org/10.1016/j.jpain.2016.06.009
+
+- Dahlhamer, J., Lucas, J., Zelaya, C., Nahin, R., Mackey, S., DeBar, L.,
+  Kerns, R., Von Korff, M., Porter, L., & Helmick, C. (2018). Prevalence of chronic pain and high-impact chronic pain among adults — United States, 2016.
+  *Morbidity and Mortality Weekly Report, 67*(36), 1001–1006.
+  https://doi.org/10.15585/mmwr.mm6736a2
+
+- Lucas, J. W., & Sohi, I. (2024). Chronic pain and high-impact chronic pain in U.S. adults, 2023. *NCHS Data Brief*, No. 518. National Center for Health Statistics.
+https://doi.org/10.15620/cdc/169630
+
+
+
+### Model transportability and external validation
+
+- Riley, R. D., Archer, L., Snell, K. I. E., Ensor, J., Dhiman, P., Martin, G. P., Bonnett, L. J., & Collins, G. S. (2024). Evaluation of clinical prediction models (part 2): how to undertake an external validation study. *BMJ, 384*, e074820. https://doi.org/10.1136/bmj-2023-074820
+
+- Collins, G. S., Dhiman, P., Ma, J., Schlussel, M. M., Archer, L., Van Calster, B., Harrell, F. E. Jr., Martin, G. P., Moons, K. G. M., van Smeden, M., Sperrin, M., & Bullock, G. S. (2024). Evaluation of clinical prediction models (part 1): from development to external validation. *BMJ, 384*, e074819. https://doi.org/10.1136/bmj-2023-074819
+
+
+
+### Classification thresholds and decision usefulness
+
+- Vickers, A. J., & Elkin, E. B. (2006). Decision curve analysis:
+  A novel method for evaluating prediction models. *Medical Decision Making, 26*(6), 565–574.
+  https://doi.org/10.1177/0272989X06295361
+
+- Efthimiou, O., Seo, M., Chalkou, K., Debray, T., Egger, M.,
+  Salanti, G., et al. (2024). Developing clinical prediction models: A step-by-step guide. *BMJ, 386*, e078276.
+  https://doi.org/10.1136/bmj-2023-078276
