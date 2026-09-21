@@ -293,9 +293,7 @@ later develop HICP.
   analytical sample and should not be interpreted as nationally weighted US
   estimates.
 
-- **Model comparisons are descriptive.** The observed ROC-AUC increases
-  (0.694 > 0.746 > 0.761) were not accompanied by a formal statistical test of
-  uncertainty around the differences.
+- **Model comparisons are descriptive.** The observed ROC-AUC values (0.694, 0.746 and 0.761) were compared descriptively; the differences were not formally tested for statistical uncertainty.
 
 - **Internal rather than external validation.** Model performance was evaluated
   using one reproducible stratified train/test split, with cross-validation used
