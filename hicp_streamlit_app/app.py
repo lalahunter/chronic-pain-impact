@@ -699,8 +699,8 @@ def scene_13():
                       letter-spacing:.035em;line-height:1.45;opacity:0;
                       animation:fadein 1s ease 1.1s forwards;">
             <div>Lara Caçador · Data Analytics · Ironhack · 2026</div>
-            <div><a href="https://www.linkedin.com/in/lara-ca%C3%A7ador/" target="_blank"
-                    style="color:#B8B1A7;text-decoration:none;font:inherit;letter-spacing:inherit;">linkedin.com/in/lara-caçador/</a></div>
+            <div><a href="https://www.linkedin.com/in/lara-cacador/" target="_blank"
+                    style="color:#B8B1A7;text-decoration:none;font:inherit;letter-spacing:inherit;">linkedin.com/in/lara-cacador/</a></div>
           </div>
         </div>
         """)
