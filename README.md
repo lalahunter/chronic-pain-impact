@@ -10,7 +10,7 @@ Using the **2025 US National Health Interview Survey (NHIS)**, this project asks
 
 **Lara Caçador** · Ironhack Data Analytics Bootcamp · September 2026
 
-`Python` · `pandas` · `scikit-learn` · `XGBoost` · `Streamlit`
+`Python` · `pandas` · `scikit-learn` · `XGBoost` · `Streamlit` · `Healthcare Analytics` · `Data Storytelling`
 
 
 ---
@@ -33,24 +33,98 @@ Using the **2025 US National Health Interview Survey (NHIS)**, this project asks
 
 ---
 
+## From analysis to story
+
+This project was designed not only to answer an analytical question, but to make the reasoning behind the answer visible.
+
+The final presentation uses a **13-scene interactive narrative**, moving from the human problem behind chronic pain to the evidence, and finally to the decisions that evidence can - and cannot - support.
+
+### 1. Frame the question before showing the data
+
+<p align="center">
+  <img src="hicp_streamlit_app/assets/scene01.png" width="900">
+</p>
+
+The presentation opens with a deliberately deliberately ambiguous phrase: **“It’s all in your head.”**
+
+In everyday clinical experience, those words can be deeply dismissive, especially when pain persists without a simple explanation. They can imply that if the problem cannot be clearly seen or measured, the pain is somehow less real.
+
+But the phrase also contains a different kind of truth. Pain is not a direct readout of tissue damage: it is a complex experience shaped by biological, psychological and social factors.
+
+The opening uses that tension deliberately - between **“it’s in your head, so it isn’t real”** and **“the brain is part of why pain is real.”**
+
+That leads to the analytical question:
+
+**If pain is more than intensity alone, is intensity enough to distinguish chronic pain from pain that substantially interferes with life and work?**
+
+---
+
+### 2. Reveal the evidence progressively
+
+<p align="center">
+  <img src="figures/model_progression.png" width="900">
+</p>
+
+Instead of presenting three completed models at once, the presentation builds the comparison in stages:
+
+**pain intensity → demographics and pain location → biopsychosocial context**
+
+With the cohort, train/test split and algorithm held constant, ROC-AUC increased from **0.694 to 0.746 to 0.761**.
+
+The progression makes the analytical argument visible: the largest gain came from moving beyond pain intensity alone and giving the model a richer picture of the person behind the pain score.
+
+A later comparison then asks a different question: whether a more complex algorithm can improve on that richer information. In this analysis, greater algorithmic complexity did not improve overall discrimination.
+
+---
+
+### 3. Turn model output into a decision
+
+<p align="center">
+  <img src="hicp_streamlit_app/assets/scene11.png" width="900">
+</p>
+
+The presentation then changes perspective: from *“How well does the model discriminate?”* to *“What would someone actually do with this probability?”*
+
+That transition leads into an interactive threshold explorer.
+
+<p align="center">
+  <img src="figures/threshold_050.png" width="49%">
+  <img src="figures/threshold_035.png" width="49%">
+</p>
+
+Changing the classification threshold makes the trade-off tangible: identifying more HICP cases also means accepting more false positives.
+
+The model can quantify that trade-off. **It cannot decide which error matters more - that judgment must be made in context, with stakeholders weighing the consequences of each.**
+
+---
+
+### 4. Close the loop
+
+<p align="center">
+  <img src="hicp_streamlit_app/assets/scene13.png" width="900">
+</p>
+
+The final scene returns to the opening phrase, now seen in a different light.
+
+What begins as a familiar form of dismissal becomes something different by the end: acknowledging the role of the brain in pain does not make that pain imaginary, trivial or less real.
+
+The intention was to make the presentation function as one continuous argument:
+
+**human experience → analytical question → evidence → decision → reinterpretation**
+
+rather than as a sequence of disconnected charts.
+
+---
+
 ## Interactive presentation
 
-The final presentation is implemented as an **interactive Streamlit app** in [`hicp_streamlit_app/`](hicp_streamlit_app/).
+## Interactive presentation
 
-It includes the full presentation flow and an interactive **HICP threshold explorer** showing how sensitivity, specificity, false positives and false negatives change as the classification threshold moves.
+The full **13-scene presentation** is built in Streamlit, preserving the pacing, progressive reveals and interactive elements used in the original presentation.
 
-<p align="center">
-  <img src="figures/threshold_050.png"
-       alt="HICP threshold explorer at 0.50"
-       width="49%">
-  <img src="figures/threshold_035.png"
-       alt="HICP threshold explorer at 0.35"
-       width="49%">
-</p>
+The app includes the complete narrative flow, from the opening framing to the model comparisons, pain-management findings, subgroup analysis and interactive HICP threshold explorer.
 
-<p align="center">
-  <em>Lowering the threshold from 0.50 to 0.35 identifies more HICP cases, at the cost of more false positives.</em>
-</p>
+Explore the presentation in [`hicp_streamlit_app/`](hicp_streamlit_app/).
 
 Run it locally with:
 
@@ -58,7 +132,6 @@ Run it locally with:
 cd hicp_streamlit_app
 python -m streamlit run app.py
 ```
-
 
 ---
 
