@@ -122,7 +122,9 @@ The full **13-scene presentation** is built in Streamlit, preserving the pacing,
 
 The app includes the complete narrative flow, from the opening framing to the model comparisons, pain-management findings, subgroup analysis and interactive HICP threshold explorer.
 
-Explore the presentation in [`hicp_streamlit_app/`](hicp_streamlit_app/).
+[![Launch interactive presentation](https://img.shields.io/badge/Launch%20interactive%20presentation-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://chronic-pain-impact.streamlit.app/)
+
+Source code: [`hicp_streamlit_app/`](hicp_streamlit_app/)
 
 Run it locally with:
 
