@@ -37,7 +37,7 @@ Using the **2025 US National Health Interview Survey (NHIS)**, this project asks
 
 This project was designed not only to answer an analytical question, but to make the reasoning behind the answer visible.
 
-The final presentation uses a **13-scene interactive narrative**, moving from the human problem behind chronic pain to the evidence, and finally to the decisions that evidence can - and cannot - support.
+The final presentation uses a **13-scene interactive narrative**, moving from the human experience behind chronic pain to the evidence, and finally to the decisions that evidence can - and cannot - support.
 
 ### 1. Frame the question before showing the data
 
@@ -45,7 +45,7 @@ The final presentation uses a **13-scene interactive narrative**, moving from th
   <img src="hicp_streamlit_app/assets/scene01.png" width="900">
 </p>
 
-The presentation opens with a deliberately deliberately ambiguous phrase: **“It’s all in your head.”**
+The presentation opens with a deliberately ambiguous phrase: **“It’s all in your head.”**
 
 In everyday clinical experience, those words can be deeply dismissive, especially when pain persists without a simple explanation. They can imply that if the problem cannot be clearly seen or measured, the pain is somehow less real.
 
@@ -115,8 +115,6 @@ The intention was to make the presentation function as one continuous argument:
 rather than as a sequence of disconnected charts.
 
 ---
-
-## Interactive presentation
 
 ## Interactive presentation
 
