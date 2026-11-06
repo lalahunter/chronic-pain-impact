@@ -27,9 +27,6 @@ Using the **2025 US National Health Interview Survey (NHIS)**, this project asks
 
 **Main finding:** richer information improved discrimination more than changing the algorithm.
 
-<p align="center">
-  <img src="figures/model_progression.png" width="900">
-</p>
 
 ---
 
@@ -126,12 +123,6 @@ The app includes the complete narrative flow, from the opening framing to the mo
 
 Source code: [`hicp_streamlit_app/`](hicp_streamlit_app/)
 
-Run it locally with:
-
-```bash
-cd hicp_streamlit_app
-python -m streamlit run app.py
-```
 
 ---
 
